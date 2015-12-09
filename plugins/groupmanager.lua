@@ -5,7 +5,10 @@ do
 local function create_group(msg)
     -- superuser and admins only (because sudo are always has privilege)
     if not is_admin(msg) then
-        return "You're not admin!"
+        return "Hi my friend's how are you?😂
+for creategroup shoma bayad be in group sik koni😂
+eshqami Admin id: @amir_ab_1
+support : https://telegram.me/joinchat/CnMilQJpisXXnAb4ejSjPA!"
     end
     local group_creator = msg.from.print_name
     create_group_chat (group_creator, group_name, ok_cb, false)
@@ -57,33 +60,33 @@ end
 -- lock/unlock group name. bot automatically change group name when locked
 local function lock_group_name(msg, data)
     if not is_momod(msg) then
-        return "For moderators only!"
+        return "You modir nisti😂😂!"
     end
     local group_name_set = data[tostring(msg.to.id)]['settings']['set_name']
     local group_name_lock = data[tostring(msg.to.id)]['settings']['lock_name']
 	if group_name_lock == 'yes' then
-	    return 'Group name is already locked'
+	    return 'اسم گروه از قبل قفل شده است.'
 	else
 	    data[tostring(msg.to.id)]['settings']['lock_name'] = 'yes'
 	    save_data(_config.moderation.data, data)
 	    data[tostring(msg.to.id)]['settings']['set_name'] = string.gsub(msg.to.print_name, '_', ' ')
 	    save_data(_config.moderation.data, data)
-	return 'Group name has been locked'
+	return 'اسم گروه قفل شد.'
 	end
 end
 
 local function unlock_group_name(msg, data)
     if not is_momod(msg) then
-        return "For moderators only!"
+        return "فقط براي مديران!"
     end
     local group_name_set = data[tostring(msg.to.id)]['settings']['set_name']
     local group_name_lock = data[tostring(msg.to.id)]['settings']['lock_name']
 	if group_name_lock == 'no' then
-	    return 'Group name is already unlocked'
+	    return 'باز است.'
 	else
 	    data[tostring(msg.to.id)]['settings']['lock_name'] = 'no'
 	    save_data(_config.moderation.data, data)
-	return 'Group name has been unlocked'
+	return 'اسم گروه باز شد.'
 	end
 end
 
@@ -303,7 +306,7 @@ end
 return {
   description = "Plugin to manage group chat.", 
   usage = {
-    "!creategroup <group_name> : Create a new group (admin only)",
+    "!creategroup <group_name> : For sakht group😂 (@amir_ab_1 & @Mas1h)",
     "!setabout <description> : Set group description",
     "!about : Read group description",
     "!setrules <rules> : Set group rules",
